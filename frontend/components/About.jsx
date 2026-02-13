@@ -1,10 +1,11 @@
 export default function About() {
     const tools = [
-        { name: 'vscode', icon: '/assets/vscode.png', },
-        { name: 'firebase', icon: '/assets/firebase.png', },
-        { name: 'mongodb', icon: '/assets/mongodb.png', },
-        { name: 'figma', icon: '/assets/figma.png', },
-        { name: 'git', icon: '/assets/git.png', },
+        { name: 'vscode', icon: '/assets/vscode.png' },
+        { name: 'git', icon: '/assets/git.png' },
+        { name: 'postman', icon: '/assets/postman.png' },
+        { name: 'linux', icon: '/assets/linux.png' },
+        { name: 'figma', icon: '/assets/figma.png' },
+        { name: 'firebase', icon: '/assets/firebase.png' },
     ];
 
     const data = [
@@ -12,19 +13,19 @@ export default function About() {
             name: 'Languages',
             icon1: '/assets/code-icon.png',
             icon2: '/assets/code-icon-dark.png',
-            description: 'HTML, CSS, JavaScript React Js, Next Js',
+            description: 'PHP, Python, C++, JavaScript, React JS, Next JS, Node JS, .NET',
         },
         {
             name: 'Education',
             icon1: '/assets/edu-icon.png',
             icon2: '/assets/edu-icon-dark.png',
-            description: 'B.Tech in Computer Science',
+            description: 'B.Sc in Computer Science - Sri Meenakshi Vidiyal Arts & Science College',
         },
         {
             name: 'Projects',
             icon1: '/assets/project-icon.png',
             icon2: '/assets/project-icon-dark.png',
-            description: 'Built more than 5 projects',
+            description: 'Built 5+ projects including SaaS ERP, eCommerce & hosting platforms',
         },
     ];
     return (
@@ -42,7 +43,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <p className="mb-10 max-w-2xl font-Ovo">I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.</p>
+                    <p className="mb-10 max-w-2xl font-Ovo">I am a Software Engineer based in Bangalore, India, with professional experience in building secure, scalable web applications. I have contributed to eCommerce startups, SaaS platforms, and multi-domain web solutions — delivering robust backend architectures, RESTful APIs, and seamless frontend experiences using Laravel, React JS, and modern full-stack technologies.</p>
 
                     <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
                         {data.map((data) => (

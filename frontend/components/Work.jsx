@@ -1,35 +1,35 @@
 export default function Work() {
     const work = [
         {
-            name: 'Frontend project',
+            name: 'School Management System – ERP SaaS',
             icon: '/assets/work-1.png',
-            description: 'Web Design',
-            link: '',
+            description: 'Full Stack Laravel | SaaS',
+            link: '#',
         },
         {
-            name: 'Geo based app',
+            name: 'Course Connect – Organization',
             icon: '/assets/work-2.png',
-            description: 'mobile app',
-            link: '',
+            description: 'React JS | PHP | Full Stack',
+            link: '#',
         },
         {
-            name: 'Photography site',
+            name: 'Cloud India Hub – Domain & Hosting',
             icon: '/assets/work-3.png',
-            description: 'Web Design',
-            link: '',
+            description: 'Full Stack | ResellerClub API',
+            link: '#',
         },
         {
-            name: 'UI/UX designing',
+            name: 'Web Digital Mantra – eCommerce',
             icon: '/assets/work-4.png',
-            description: 'UI/UX Design',
-            link: '',
+            description: 'Laravel | API Development',
+            link: '#',
         }
     ];
     return (
         <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
             <h4 className="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
             <h2 className="text-center text-5xl font-Ovo">My latest work</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</p>
+            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my portfolio! Explore a collection of projects showcasing my expertise in full-stack development, SaaS platforms, API integrations, and secure web applications.</p>
 
             <div className="grid grid-cols-auto my-10 gap-5 dark:text-black">
                 {work.map((work) => (
@@ -46,12 +46,11 @@ export default function Work() {
                     </div>
                 ))}
             </div>
-            <a href="#" className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2 px-8 mx-auto my-20 duration-300 dark:text-white">
+            <a href="https://github.com/Klinton0365" target="_blank" rel="noopener noreferrer" className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2 px-8 mx-auto my-20 duration-300 dark:text-white">
                 Show more
                 <img src="/assets/right-arrow-bold.png" alt="" className="w-4 dark:hidden" />
                 <img src="/assets/right-arrow-bold-dark.png" alt="" className="w-4 hidden dark:block" />
             </a>
-
         </div>
     )
 }
