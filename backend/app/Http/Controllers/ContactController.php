@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
     public function store(Request $request)
     {
+        Log::info($request->all());
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
