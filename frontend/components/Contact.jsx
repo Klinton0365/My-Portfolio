@@ -1,37 +1,77 @@
 'use client'
+import { API_URL } from "@/lib/config";
 import { useEffect, useState } from 'react'
 
 export default function Contact() {
     const [result, setResult] = useState("");
+    // const onSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const hCaptcha = event.target.querySelector('textarea[name=h-captcha-response]').value;
+    //     if (!hCaptcha) {
+    //         event.preventDefault();
+    //         setResult("Please fill out captcha field");
+    //         return
+    //     }
+    //     setResult("Sending....");
+    //     const formData = new FormData(event.target);
+
+    //     // ----- Enter your Web3 Forms Access key below---------
+
+    //     formData.append("access_key", "--- enter your access key here-------");
+
+    //     const res = await fetch("https://api.web3forms.com/submit", {
+    //         method: "POST",
+    //         body: formData
+    //     }).then((res) => res.json());
+
+    //     if (res.success) {
+    //         console.log("Success", res);
+    //         setResult(res.message);
+    //         event.target.reset();
+    //     } else {
+    //         console.log("Error", res);
+    //         setResult(res.message);
+    //     }
+    // };
     const onSubmit = async (event) => {
         event.preventDefault();
-        const hCaptcha = event.target.querySelector('textarea[name=h-captcha-response]').value;
+
+        const hCaptcha = event.target.querySelector(
+            'textarea[name="h-captcha-response"]'
+        )?.value;
+
         if (!hCaptcha) {
-            event.preventDefault();
-            setResult("Please fill out captcha field");
-            return
+            setResult("Please complete the captcha");
+            return;
         }
-        setResult("Sending....");
+
+        setResult("Sending...");
+
         const formData = new FormData(event.target);
 
-        // ----- Enter your Web3 Forms Access key below---------
+        try {
+            const response = await fetch(
+                `${API_URL}/api/contact`,
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
 
-        formData.append("access_key", "--- enter your access key here-------");
+            const data = await response.json();
 
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        }).then((res) => res.json());
-
-        if (res.success) {
-            console.log("Success", res);
-            setResult(res.message);
-            event.target.reset();
-        } else {
-            console.log("Error", res);
-            setResult(res.message);
+            if (data.success) {
+                setResult("Message sent successfully!");
+                event.target.reset();
+            } else {
+                setResult(data.message || "Something went wrong");
+            }
+        } catch (error) {
+            console.error(error);
+            setResult("Server error. Please try again.");
         }
     };
+
 
     function CaptchaLoader() {
         const captchadiv = document.querySelectorAll('[data-captcha="true"]');
@@ -93,7 +133,7 @@ export default function Contact() {
                 <textarea rows="6" placeholder="Enter your message" className="w-full px-4 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white mb-6 dark:bg-darkHover/30" required name="message"></textarea>
                 <div className="h-captcha mb-6 max-w-full" data-captcha="true"></div>
                 <button type='submit' className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border dark:border-white/30 dark:hover:bg-darkHover">
-                Submit now
+                    Submit now
                     <img src="/assets/right-arrow-white.png" alt="" className="w-4" />
                 </button>
                 <p className='mt-4'>{result}</p>
