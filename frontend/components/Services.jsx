@@ -1,46 +1,86 @@
-export default function Services() {
-    const services = [
-        {
-            name: 'Full Stack Web Development',
-            icon: '/assets/web-icon.png',
-            description: 'Building secure, scalable web applications using Laravel, PHP, React JS, and Next JS with MVC architecture, Eloquent ORM, and RESTful APIs.',
-            link: '#',
-        },
-        {
-            name: 'API Development & Integration',
-            icon: '/assets/mobile-icon.png',
-            description: 'Designing and integrating REST APIs for seamless communication across platforms, including OTP, WhatsApp, email, and third-party service integrations.',
-            link: '#',
-        },
-        {
-            name: 'SaaS & ERP Solutions',
-            icon: '/assets/ui-icon.png',
-            description: 'Developing end-to-end SaaS platforms with role-based access control, automated workflows, fee management, and multi-module administrative systems.',
-            link: '#',
-        },
-        {
-            name: 'Security & Performance',
-            icon: '/assets/graphics-icon.png',
-            description: 'Implementing secure authentication, data encryption, and protection against XSS, SQL injection, and CSRF attacks with optimized SEO and performance.',
-            link: '#',
-        }
-    ];
-    return (
-        <div id="services" className="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 className="text-center mb-2 text-lg font-Ovo">What i offer</h4>
-            <h2 className="text-center text-5xl font-Ovo">My services</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I am a Software Engineer based in Bangalore, India, specializing in building production-ready web applications, SaaS platforms, and secure backend systems with modern full-stack technologies.</p>
+import { Cpu, Layers, Plug, ShieldCheck } from "lucide-react";
 
-            <div className="grid grid-cols-auto gap-6 my-10">
-                {services.map((service) => (
-                    <div key={service.name} className="border border-gray-300 dark:border-white/30 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
-                        <img src={service.icon} alt="" className="w-10" />
-                        <h3 className="text-lg my-4 text-gray-700 dark:text-white">{service.name}</h3>
-                        <p className="text-sm text-gray-600 leading-5 dark:text-white/80">{service.description}</p>
-                        <a href={service.link} className="flex items-center gap-2 text-sm mt-5">Read more <img src="/assets/right-arrow.png" alt="" className="w-4" /></a>
-                    </div>
-                ))}
+export default function Services() {
+  const services = [
+    {
+      name: "AI-Integrated Full Stack Development",
+      icon: Cpu,
+      description:
+        "Building production-ready web applications using Laravel, Next.js, and React with AI integrations like OpenAI APIs, automation workflows, and intelligent dashboards.",
+      link: "#",
+    },
+    {
+      name: "Scalable SaaS Architecture",
+      icon: Layers,
+      description:
+        "Designing multi-tenant SaaS platforms with role-based access, subscription billing, API-first architecture, and cloud-optimized deployment strategies.",
+      link: "#",
+    },
+    {
+      name: "Advanced API & System Integrations",
+      icon: Plug,
+      description:
+        "Developing secure RESTful APIs and integrating third-party services including payment gateways, WhatsApp APIs, OTP systems, and enterprise CRM tools.",
+      link: "#",
+    },
+    {
+      name: "Security, Optimization & DevOps",
+      icon: ShieldCheck,
+      description:
+        "Implementing secure authentication, rate limiting, encryption, and CI/CD pipelines with performance optimization for high-traffic production environments.",
+      link: "#",
+    },
+  ];
+
+  return (
+    <section
+      id="services"
+      className="w-full px-[10%] py-20 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-neutral-900"
+    >
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h4 className="text-lg font-medium text-gray-500 mb-2">
+          What I Offer
+        </h4>
+        <h2 className="text-4xl md:text-5xl mb-6 font-Ovo">
+          Professional Services
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400">
+          Delivering scalable, secure, and AI-powered web solutions tailored
+          for modern startups, SaaS businesses, and enterprise platforms.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map((service) => {
+          const Icon = service.icon; // ✅ Correct place
+
+          return (
+            <div
+              key={service.name}
+              className="group bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-black/5 dark:bg-white/10 mb-6">
+                <Icon className="w-7 h-7 text-black dark:text-white group-hover:scale-110 transition-transform duration-300" />
+              </div>
+
+              <h3 className="text-xl font-semibold mb-4">
+                {service.name}
+              </h3>
+
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                {service.description}
+              </p>
+
+              <a
+                href={service.link}
+                className="inline-flex items-center text-sm font-medium text-black dark:text-white hover:underline"
+              >
+                Learn More →
+              </a>
             </div>
-        </div>
-    )
+          );
+        })}
+      </div>
+    </section>
+  );
 }
