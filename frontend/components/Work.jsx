@@ -1,4 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
 
 export default function Work() {
   const work = [
@@ -14,21 +16,21 @@ export default function Work() {
       image: "/assets/work-2.png",
       category: "Full Stack Web App",
       tech: ["React", "PHP", "REST API"],
-      link: "#",
+      link: "/projects/course-connect-platform",
     },
     {
       name: "Cloud India Hub",
       image: "/assets/work-3.png",
       category: "Domain & Hosting Automation",
       tech: ["Laravel", "ResellerClub API", "Payment Gateway"],
-      link: "#",
+      link: "/projects/cloud-india-hub",
     },
     {
       name: "Web Digital Mantra eCommerce",
       image: "/assets/work-4.png",
       category: "eCommerce System",
       tech: ["Laravel", "Custom APIs", "Admin Panel"],
-      link: "#",
+      link: "/projects/web-digital-mantra-ecommerce",
     },
   ];
 
@@ -100,14 +102,12 @@ export default function Work() {
 
       {/* GitHub CTA */}
       <div className="text-center mt-20">
-        <a
-          href="https://github.com/Klinton0365"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/projects"
           className="inline-flex items-center gap-3 px-8 py-3 border rounded-full text-sm font-medium hover:bg-black hover:text-white transition duration-300 dark:border-neutral-600"
         >
           Explore More Projects
-        </a>
+        </Link>
       </div>
     </section>
   );

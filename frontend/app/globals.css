@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Scroll-triggered animation: elements start hidden, animate when .in-view is added */
+.animate-on-scroll {
+    opacity: 0;
+}
+.animate-on-scroll.in-view {
+    opacity: 1;
+}
