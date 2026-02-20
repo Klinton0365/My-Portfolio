@@ -112,7 +112,7 @@ export default function About() {
 
                         {/* Spinning badge */}
                         <div className="bg-white dark:bg-darkTheme w-24 h-24 sm:w-28 sm:h-28 absolute -right-4 -bottom-4 rounded-full shadow-[0_4px_55px_rgba(79,70,229,0.25)] flex items-center justify-center z-20 border-2 border-white dark:border-darkTheme">
-                            <img src="/assets/circular-text.png" alt="" className="w-full animate-spin_slow" />
+                            <img src="/assets/full-stack deveoper.png" alt="" className="w-full animate-spin_slow" />
                             <img src="/assets/dev-icon.png" alt="" className="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                         </div>
                     </div>
