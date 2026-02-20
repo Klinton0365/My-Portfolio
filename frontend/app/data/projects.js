@@ -119,39 +119,41 @@ export const projects = [
   live: "#"
 },
 {
-  slug: "web-digital-mantra-ecommerce",
-  title: "Web Digital Mantra – eCommerce System",
-  category: "eCommerce Platform",
+  slug: "sustainable-soil-systems",
+  title: "Sustainable Soil Systems",
+  category: "Agriculture & Sustainability",
   description:
-    "A full-stack eCommerce platform with secure authentication, order management, and API-based integrations.",
+    "A web platform for monitoring and managing soil health data, enabling farmers and agronomists to make data-driven decisions for sustainable agriculture practices.",
 
   problem:
-    "Need for a scalable eCommerce solution with secure payment processing and streamlined product management.",
+    "Farmers and agricultural organizations lacked a centralized digital tool to track soil quality metrics, nutrient levels, and sustainability indicators across multiple land parcels — leading to poor crop planning and resource waste.",
 
   solution:
-    "Built a Laravel-based eCommerce backend with optimized database queries, secure checkout flow, and API-based integrations for enhanced functionality.",
+    "Built a Laravel-based platform with an analytics dashboard that aggregates soil data from field inputs and sensor integrations. Implemented REST APIs for data collection, visual reporting for nutrient trends, and role-based access for farm managers and field officers.",
 
   features: [
-    "Product & Inventory Management",
-    "Secure Checkout System",
-    "Order Tracking & Reporting",
-    "Admin Panel",
-    "API Integrations"
+    "Soil Health Monitoring Dashboard",
+    "Nutrient Level Tracking & Trend Analysis",
+    "Multi-Parcel Land Management",
+    "Role-Based Access (Admin, Agronomist, Field Officer)",
+    "Data Export & Reporting",
+    "REST API for Sensor Data Ingestion"
   ],
 
   tech: [
     "Laravel",
     "MySQL",
     "REST APIs",
-    "Payment Gateway",
-    "Authentication & Security"
+    "Chart.js",
+    "Dashboard Analytics",
+    "Role-Based Access"
   ],
 
   challenges:
-    "Optimizing performance for product listings and implementing secure transaction handling.",
+    "Designing a flexible data model to support varying soil parameters across different regions and crop types while keeping the dashboard responsive with large datasets.",
 
   impact:
-    "Enhanced operational efficiency and improved customer purchasing experience with secure architecture.",
+    "Enabled data-driven farming decisions, reduced fertilizer waste by providing precise nutrient recommendations, and improved crop yield planning for participating agricultural organizations.",
 
   image: "/assets/work-4.png",
   github: "#",

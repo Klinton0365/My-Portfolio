@@ -26,11 +26,11 @@ export default function Work() {
       link: "/projects/cloud-india-hub",
     },
     {
-      name: "Web Digital Mantra eCommerce",
+      name: "Sustainable Soil Systems",
       image: "/assets/work-4.png",
-      category: "eCommerce System",
-      tech: ["Laravel", "Custom APIs", "Admin Panel"],
-      link: "/projects/web-digital-mantra-ecommerce",
+      category: "Agriculture & Sustainability",
+      tech: ["Laravel", "REST API", "Dashboard", "Analytics"],
+      link: "/projects/sustainable-soil-systems",
     },
   ];
 

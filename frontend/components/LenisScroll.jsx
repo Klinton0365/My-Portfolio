@@ -13,6 +13,9 @@ export default function LenisScroll() {
             },
         });
 
+        // Expose globally so modals can stop/start scroll
+        window.lenis = lenis;
+
         const raf = (time) => {
             lenis.raf(time);
             requestAnimationFrame(raf);
@@ -22,6 +25,7 @@ export default function LenisScroll() {
 
         return () => {
             lenis.destroy();
+            window.lenis = undefined;
         };
     }, []);
 

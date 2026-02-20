@@ -34,17 +34,43 @@ export default function HireModal({ isOpen, onClose }) {
     const modalRef = useRef(null);
     const [visible, setVisible] = useState(false);
 
-    // Animate in/out
+    // Animate in + block wheel/touch events from reaching Lenis
     useEffect(() => {
         if (isOpen) {
-            document.body.style.overflow = 'hidden';
             requestAnimationFrame(() => setVisible(true));
         } else {
             setVisible(false);
-            document.body.style.overflow = '';
         }
+    }, [isOpen]);
+
+    // Block scroll events from leaking to Lenis while modal is open
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const blockScroll = (e) => {
+            // If scrolling inside the modal content, allow it but stop propagation
+            // If scrolling on the backdrop, prevent everything
+            const modal = modalRef.current;
+            if (!modal) return;
+
+            const contentBox = modal.querySelector('[data-modal-content]');
+            if (contentBox && contentBox.contains(e.target)) {
+                // Inside modal content — allow native scroll, block Lenis
+                e.stopPropagation();
+            } else {
+                // On backdrop — block all scroll
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        };
+
+        // Capture phase so we intercept before Lenis sees the events
+        window.addEventListener('wheel', blockScroll, { capture: true, passive: false });
+        window.addEventListener('touchmove', blockScroll, { capture: true, passive: false });
+
         return () => {
-            document.body.style.overflow = '';
+            window.removeEventListener('wheel', blockScroll, { capture: true });
+            window.removeEventListener('touchmove', blockScroll, { capture: true });
         };
     }, [isOpen]);
 
@@ -115,7 +141,8 @@ export default function HireModal({ isOpen, onClose }) {
             className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 transition-all duration-500 ${visible ? 'bg-black/60 backdrop-blur-sm' : 'bg-black/0'}`}
         >
             <div
-                className={`relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-[#0f0f1a] rounded-2xl shadow-2xl shadow-[#4f46e5]/10 border border-gray-200 dark:border-white/10 transition-all duration-500 ${visible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-8'}`}
+                data-modal-content
+                className={`relative w-full max-w-2xl max-h-[90vh] overflow-y-auto overscroll-contain bg-white dark:bg-[#0f0f1a] rounded-2xl shadow-2xl shadow-[#4f46e5]/10 border border-gray-200 dark:border-white/10 transition-all duration-500 ${visible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-8'}`}
             >
                 {/* Gradient top bar */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] rounded-t-2xl" />
