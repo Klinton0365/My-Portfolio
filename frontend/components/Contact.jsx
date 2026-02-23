@@ -95,7 +95,7 @@ export default function Contact() {
 
             <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
 
-                <input type="hidden" name="subject" value="Eliana Jade - New form Submission" />
+                <input type="hidden" name="subject" value="My Contact Enquiry - New form Submission" />
 
                 <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
                     <input type="text" placeholder="Enter your name" className="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkHover/30" required name="name" />

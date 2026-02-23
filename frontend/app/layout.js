@@ -13,8 +13,8 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-    title: "Eliana Portfolio - PrebuiltUI",
-    description: "Eliana Jade is a frontend web developer based in London, UK. I am a self-taught developer with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.",
+    title: "Klinton Portfolio",
+    description: "I am a Software Engineer based in Bangalore, India, with professional experience in building secure, scalable web applications. I have contributed to eCommerce startups, SaaS platforms, and multi-domain web solutions, delivering robust backend architectures, RESTful APIs, and seamless frontend experiences using Laravel, React JS, and modern full-stack technologies.",
 };
 
 export default function RootLayout({ children }) {
