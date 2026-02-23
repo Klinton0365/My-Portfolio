@@ -4,35 +4,7 @@ import { useEffect, useState } from 'react'
 
 export default function Contact() {
     const [result, setResult] = useState("");
-    // const onSubmit = async (event) => {
-    //     event.preventDefault();
-    //     const hCaptcha = event.target.querySelector('textarea[name=h-captcha-response]').value;
-    //     if (!hCaptcha) {
-    //         event.preventDefault();
-    //         setResult("Please fill out captcha field");
-    //         return
-    //     }
-    //     setResult("Sending....");
-    //     const formData = new FormData(event.target);
-
-    //     // ----- Enter your Web3 Forms Access key below---------
-
-    //     formData.append("access_key", "--- enter your access key here-------");
-
-    //     const res = await fetch("https://api.web3forms.com/submit", {
-    //         method: "POST",
-    //         body: formData
-    //     }).then((res) => res.json());
-
-    //     if (res.success) {
-    //         console.log("Success", res);
-    //         setResult(res.message);
-    //         event.target.reset();
-    //     } else {
-    //         console.log("Error", res);
-    //         setResult(res.message);
-    //     }
-    // };
+    
     const onSubmit = async (event) => {
         event.preventDefault();
 
@@ -51,7 +23,7 @@ export default function Contact() {
 
         try {
             const response = await fetch(
-                `${API_URL}/api/contact`,
+                `${API_URL}/contact`,
                 {
                     method: "POST",
                     body: formData,

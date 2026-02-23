@@ -2,6 +2,12 @@ import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export default async function ShowcasePage({ params }) {
   const { slug } = await params;
 

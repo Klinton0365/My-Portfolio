@@ -26,7 +26,7 @@ class ContactController extends Controller
         $response = Http::asForm()->post(
             'https://hcaptcha.com/siteverify',
             [
-                'secret' => env('HCAPTCHA_SECRET'),
+                'secret' => config('services.hcaptcha.secret'),
                 'response' => $request->input('h-captcha-response'),
             ]
         );

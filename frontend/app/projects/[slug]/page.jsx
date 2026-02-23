@@ -3,6 +3,12 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
