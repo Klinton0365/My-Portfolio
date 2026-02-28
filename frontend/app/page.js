@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CardHoverEffectDemo from "@/components/CardHoverEffectDemo";
 
 export default function Page() {
     return (
@@ -14,6 +15,7 @@ export default function Page() {
             <Navbar />
             <Header />
             <About />
+            {/* <CardHoverEffectDemo /> */}
             <Services />
             <Work />
             <Contact />

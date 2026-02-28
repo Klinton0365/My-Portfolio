@@ -10,23 +10,6 @@
     opacity: 1;
 }
 
-@keyframes lampReveal {
-    from {
-        opacity: 0.5;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.lamp-reveal {
-    animation: lampReveal 0.8s ease-in-out 0.3s both;
-}
-
-
-
 @layer base {
   :root {
         --background: 0 0% 100%;
