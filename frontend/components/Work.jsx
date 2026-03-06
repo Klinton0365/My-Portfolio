@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { WobbleCard } from "@/components/ui/wobble-card";
 
 
 export default function Work() {
@@ -40,9 +41,15 @@ export default function Work() {
       className="w-full px-[10%] py-20 bg-white dark:bg-neutral-900"
     >
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h4 className="text-lg text-gray-500 mb-2">Portfolio</h4>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Featured Projects
+        <p className="text-sm font-medium tracking-[0.3em] uppercase text-[#818cf8] dark:text-[#a5b4fc] mb-3 font-Outfit">
+          Portfolio
+        </p>
+        <h2 className="text-4xl md:text-5xl mb-6 font-Ovo dark:text-white inline-flex items-center justify-center gap-3 flex-wrap">
+          Featured{' '}
+          <span className="relative inline-block px-4 py-1">
+            <span className="absolute inset-0 bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] rounded-lg" />
+            <span className="relative text-white font-Ovo">Projects</span>
+          </span>
         </h2>
         <p className="text-gray-600 dark:text-gray-400">
           A selection of scalable SaaS platforms, automation systems, and
@@ -53,50 +60,53 @@ export default function Work() {
 
       <div className="grid md:grid-cols-2 gap-10">
         {work.map((project) => (
-          <div
+          <WobbleCard
             key={project.name}
-            className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500"
+            containerClassName="bg-transparent shadow-md hover:shadow-2xl rounded-2xl"
+            className="p-0"
           >
-            {/* Image */}
-            <div className="overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-[320px] object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-            </div>
-
-            {/* Overlay Content */}
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8 text-white">
-              <span className="text-xs uppercase tracking-wider text-gray-300 mb-2">
-                {project.category}
-              </span>
-
-              <h3 className="text-2xl font-semibold mb-3">
-                {project.name}
-              </h3>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-5">
-                {project.tech.map((item) => (
-                  <span
-                    key={item}
-                    className="text-xs bg-white/20 px-3 py-1 rounded-full"
-                  >
-                    {item}
-                  </span>
-                ))}
+            <div className="group relative rounded-2xl overflow-hidden">
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-[320px] object-cover group-hover:scale-110 transition-transform duration-700"
+                />
               </div>
 
-              <a
-                href={project.link}
-                className="inline-flex items-center gap-2 text-sm font-medium"
-              >
-                View Case Study
-                <ArrowUpRight size={16} />
-              </a>
+              {/* Overlay Content */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8 text-white">
+                <span className="text-xs uppercase tracking-wider text-gray-300 mb-2">
+                  {project.category}
+                </span>
+
+                <h3 className="text-2xl font-semibold mb-3">
+                  {project.name}
+                </h3>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {project.tech.map((item) => (
+                    <span
+                      key={item}
+                      className="text-xs bg-white/20 px-3 py-1 rounded-full"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.link}
+                  className="inline-flex items-center gap-2 text-sm font-medium"
+                >
+                  View Case Study
+                  <ArrowUpRight size={16} />
+                </a>
+              </div>
             </div>
-          </div>
+          </WobbleCard>
         ))}
       </div>
 

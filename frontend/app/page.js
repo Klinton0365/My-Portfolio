@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import CardHoverEffectDemo from "@/components/CardHoverEffectDemo";
+import WobbleCardDemo from "@/components/WobbleCardDemo";
 
 export default function Page() {
     return (
@@ -15,8 +15,9 @@ export default function Page() {
             <Navbar />
             <Header />
             <About />
-            {/* <CardHoverEffectDemo /> */}
+
             <Services />
+            {/* <WobbleCardDemo /> */}
             <Work />
             <Contact />
             <Footer />

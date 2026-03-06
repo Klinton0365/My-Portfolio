@@ -75,6 +75,15 @@ export default function About() {
             id="about"
             className="w-full px-[12%] py-10 scroll-mt-20 relative overflow-hidden"
         >
+            {/* Lamp Effect Header */}
+            {/* <div className="relative mb-16 overflow-hidden rounded-3xl border border-white/10 bg-slate-950 px-6 py-16">
+                <div className="pointer-events-none absolute left-1/2 top-0 h-52 w-[34rem] -translate-x-1/2 bg-gradient-to-b from-indigo-300/40 via-violet-300/20 to-transparent blur-3xl" />
+                <div className="pointer-events-none absolute left-1/2 top-0 h-36 w-[22rem] -translate-x-1/2 bg-gradient-to-b from-white/45 to-transparent blur-2xl" />
+                <h3 className="lamp-reveal relative z-10 mt-8 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text py-4 text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
+                    About me <br /> the right way
+                </h3>
+            </div> */}
+
             {/* Decorative background glows */}
             <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#4f46e5]/8 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-[#7c3aed]/8 rounded-full blur-[120px] pointer-events-none" />
