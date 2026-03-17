@@ -19,22 +19,21 @@ class ContactController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'message' => 'required',
-            'h-captcha-response' => 'required'
+            'recaptcha_token' => 'required|string',
         ]);
 
-        // Verify hCaptcha
-        $response = Http::asForm()->post(
-            'https://hcaptcha.com/siteverify',
-            [
-                'secret' => config('services.hcaptcha.secret'),
-                'response' => $request->input('h-captcha-response'),
-            ]
-        );
+        // Verify Google reCAPTCHA
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => config('services.recaptcha.secret'),
+            'response' => $request->input('recaptcha_token'),
+            'remoteip' => $request->ip(),
+        ]);
 
-        if (!($response->json()['success'] ?? false)) {
+        $recaptchaData = $response->json();
+        if (!($recaptchaData['success'] ?? false) || ($recaptchaData['score'] ?? 0) < 0.5) {
             return response()->json([
                 'success' => false,
-                'message' => 'Captcha verification failed'
+                'message' => 'reCAPTCHA verification failed. Please try again.'
             ], 422);
         }
 
