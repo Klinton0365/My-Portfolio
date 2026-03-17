@@ -10,6 +10,9 @@ module.exports = {
     ],
     theme: {
     	extend: {
+    		backgroundImage: {
+    			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+    		},
     		gridTemplateColumns: {
     			auto: 'repeat(auto-fit, minmax(200px, 1fr))'
     		},
