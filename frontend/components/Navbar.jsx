@@ -50,14 +50,14 @@ export default function Navbar() {
                 <img src="/assets/header-bg-color.png" alt="" className="w-full" />
             </div>
 
-            <nav ref={navRef} className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+            <nav ref={navRef} className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-2 flex items-center justify-between z-50">
 
                 <a href="https://klinton.thewebwave.in">
                     <img src="/assets/Sign-white.png" alt="Logo" className="w-28 cursor-pointer mr-14 dark:hidden" />
                     <img src="/assets/Sign-black.png" alt="Logo" className="w-28 cursor-pointer mr-14 hidden dark:block" />
                 </a>
 
-                <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
+                <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-2 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">Home</a></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">About me</a></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">Services</a></li>
