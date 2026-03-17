@@ -15,7 +15,7 @@ const ovo = Ovo({
 
 export const metadata = {
     title: "Klinton Portfolio",
-    description: "I am a Software Engineer based in Bangalore, India, with professional experience in building secure, scalable web applications. I have contributed to eCommerce startups, SaaS platforms, and multi-domain web solutions, delivering robust backend architectures, RESTful APIs, and seamless frontend experiences using Laravel, React JS, and modern full-stack technologies.",
+    description: "I am a Full Stack Engineer based in Bangalore, India, with professional experience in building secure, scalable web applications. I have contributed to eCommerce startups, SaaS platforms, and multi-domain web solutions, delivering robust backend architectures, RESTful APIs, and seamless frontend experiences using Laravel, React JS, and modern full-stack technologies.",
 };
 
 export default function RootLayout({ children }) {

@@ -13,8 +13,8 @@ export default function Header() {
                     Hi! I&apos;m Klinton A
                     <img src="/assets/hand-icon.png" alt="" className="w-6 mb-1" />
                 </h3>
-                <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Software Engineer</h1>
-                <p className="max-w-2xl mx-auto font-Ovo">I am a Software Engineer based in Bangalore, India, specializing in building secure, scalable web applications with Laravel, React JS, and modern PHP full-stack technologies.</p>
+                <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Full Stack Engineer</h1>
+                <p className="max-w-2xl mx-auto font-Ovo">I am a Full Stack Engineer based in Bangalore, India, specializing in building secure, scalable web applications with Laravel, React JS, and modern PHP full-stack technologies.</p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
                     <a href="#contact"

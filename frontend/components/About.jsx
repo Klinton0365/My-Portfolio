@@ -149,7 +149,7 @@ export default function About() {
                 {/* Right: Content */}
                 <div className="animate-on-scroll animate-slide-right flex-1 lg:w-[60%]">
                     <p className="mb-10 max-w-2xl font-Ovo text-gray-700 dark:text-white/90 text-lg leading-relaxed">
-                        I am a <span className="font-semibold text-gray-900 dark:text-white">Software Engineer</span> based in Bangalore, India, with professional experience in building secure, scalable web applications. I have contributed to eCommerce startups, SaaS platforms, and multi-domain web solutions — delivering robust backend architectures, RESTful APIs, and seamless frontend experiences using <span className="font-semibold text-gray-900 dark:text-white">Laravel, React JS</span>, and modern full-stack technologies.
+                        I am a <span className="font-semibold text-gray-900 dark:text-white">Full Stack Engineer</span> based in Bangalore, India, with professional experience in building secure, scalable web applications. I have contributed to eCommerce startups, SaaS platforms, and multi-domain web solutions — delivering robust backend architectures, RESTful APIs, and seamless frontend experiences using <span className="font-semibold text-gray-900 dark:text-white">Laravel, React JS</span>, and modern full-stack technologies.
                     </p>
 
                     {/* Info Cards */}
