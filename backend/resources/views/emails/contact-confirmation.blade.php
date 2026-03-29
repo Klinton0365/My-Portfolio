@@ -106,7 +106,7 @@
 
         <!-- CTA -->
         <div class="cta">
-            <a href="https://klinton.thewebwave.in" target="_blank">Visit My Portfolio</a>
+            <a href="https://slateblue-raccoon-549806.hostingersite.com" target="_blank">Visit My Portfolio</a>
         </div>
     </div>
 
@@ -115,7 +115,7 @@
         <div class="social">
             <a href="https://github.com/klinton" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/klinton" target="_blank">LinkedIn</a>
-            <a href="https://klinton.thewebwave.in" target="_blank">Portfolio</a>
+            <a href="https://slateblue-raccoon-549806.hostingersite.com" target="_blank">Portfolio</a>
         </div>
         <p>
             You're receiving this because you contacted <strong>Klinton A</strong> via the portfolio website.<br/>

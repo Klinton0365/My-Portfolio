@@ -52,7 +52,7 @@ export default function Navbar() {
 
             <nav ref={navRef} className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-2 flex items-center justify-between z-50">
 
-                <a href="https://klinton.thewebwave.in">
+                <a href="https://slateblue-raccoon-549806.hostingersite.com">
                     <img src="/assets/Sign-white.png" alt="Logo" className="w-28 cursor-pointer mr-14 dark:hidden" />
                     <img src="/assets/Sign-black.png" alt="Logo" className="w-28 cursor-pointer mr-14 hidden dark:block" />
                 </a>
